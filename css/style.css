@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 128, 0, 0.7); 
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #b2ff59; 
+    font-family: "New Amsterdam", sans-serif;
+}
+
+.riddles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.riddle-card {
+    width: 250px;
+    height: 150px;
+    margin: 15px;
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.riddle-card .riddle-front,
+.riddle-card .riddle-back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.6s;
+    font-size: 1rem;
+}
+
+.riddle-front {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(139, 195, 74, 0.9)); 
+    color: #ffffff;
+    font-family: "Teko", sans-serif;
+}
+
+.riddle-back {
+    background: linear-gradient(135deg, rgba(0, 150, 136, 0.9), rgba(0, 188, 212, 0.9));
+    color: #ffffff;
+    font-family: "Teko", sans-serif;
+    transform: rotateY(180deg);
+}
+
+.riddle-card.flipped .riddle-front {
+    transform: rotateY(180deg);
+}
+
+.riddle-card.flipped .riddle-back {
+    transform: rotateY(0deg);
+}
+
+footer {
+    background-color: rgb(0, 84, 57); 
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family: "New Amsterdam", sans-serif;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #b2ff59; 
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content a {
+    color: #c5e1a5;
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+    color: #8bc34a; 
+}
