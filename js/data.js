@@ -1,0 +1,22 @@
+const riddlesData = [
+    { "question": "Uchmaydi, lekin qanoti bor. Nima?", "answer": "Samolyot" },
+    { "question": "Suvni yutadi, lekin tirik emas. Nima?", "answer": "Gubka" },
+    { "question": "Har doim o'sadi, lekin ko'rinmaydi. Nima?", "answer": "Soch" },
+    { "question": "Qachon qarasang, har doim oldinda. Nima?", "answer": "Kelajak" },
+    { "question": "Qanday to'ldirilsa, shunchalik yengil bo'ladi. Nima?", "answer": "Teshik" },
+    { "question": "Faqat sindirilsa, ishlaydi. Nima?", "answer": "Tuxum" },
+    { "question": "Ko'zing bilan ko'rolmaysan, faqat his qilasan. Nima?", "answer": "Shamol" },
+    { "question": "Suvda cho'kmaydi, olovda yonmaydi. Nima?", "answer": "Muz" },
+    { "question": "Har doim ketadi, lekin hech qachon qaytmaydi. Nima?", "answer": "Vaqt" },
+    { "question": "Qanchalik ko'p olsang, shunchalik kattalashadi. Nima?", "answer": "Teshik" },
+    { "question": "Faqat tunda ishlaydi, kunduzi ko'rinmaydi. Nima?", "answer": "Yulduz" },
+    { "question": "Ko'rinmas, lekin hamma joyda bor. Nima?", "answer": "Havo" },
+    { "question": "Qanchalik toza bo'lsa, shunchalik ko'rinmaydi. Nima?", "answer": "Oyna" },
+    { "question": "O'z joyida turadi, lekin butun dunyoni aylanadi. Nima?", "answer": "Atlas" },
+    { "question": "Sukut saqlaydi, lekin hamma narsani biladi. Nima?", "answer": "Kitob" },
+    { "question": "Faqat sinib ishlaydi. Nima?", "answer": "Oyna" },
+    { "question": "Ochiq tursa yaxshi, yopiq tursa yomon. Nima?", "answer": "Ko'z" },
+    { "question": "Har doim egilsa, hech qachon sinmaydi. Nima?", "answer": "Soch" },
+    { "question": "Faqat qo'rqitadi, lekin hech qachon zarar qilmaydi. Nima?", "answer": "Tush" },
+    { "question": "Oynaga o'xshaydi, lekin suvdan. Nima?", "answer": "Ko'l" }
+];

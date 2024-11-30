@@ -5,112 +5,143 @@
 }
 
 body {
+    font-family: 'Teko', sans-serif;
     line-height: 1.6;
-    background-color: #000;
+    background-image: url(../img/windows-11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
 }
 
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
-    background-color: rgba(0, 128, 0, 0.7); 
+    background: rgba(15, 155, 15, 0.8); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    font-family: "Ubuntu", sans-serif;
 }
 
 .logo h1 {
-    font-size: 2rem;
-    color: #b2ff59; 
-    font-family: "New Amsterdam", sans-serif;
+    font-size: 2.8rem;
+    color: rgba(168, 224, 99, 0.9);
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .riddles-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    gap: 20px;
+    padding: 40px 20px;
+    flex: 1; 
+    font-family: "Roboto Mono", monospace;
 }
 
 .riddle-card {
-    width: 250px;
-    height: 150px;
-    margin: 15px;
+    width: 320px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
     perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease, box-shadow 0.4s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    border-radius: 10px; 
-    overflow: hidden;
 }
 
-.riddle-card .riddle-front,
-.riddle-card .riddle-back {
+.riddle-card:hover {
+    background: rgba(255, 255, 255, 0.15); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.riddle-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.riddle-front,
+.riddle-back {
+    position: absolute;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
     padding: 20px;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: transform 0.6s;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
 }
 
 .riddle-front {
-    background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(139, 195, 74, 0.9)); 
-    color: #ffffff;
-    font-family: "Teko", sans-serif;
+    background: rgba(76, 175, 80, 0.9); 
+    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .riddle-back {
-    background: linear-gradient(135deg, rgba(0, 150, 136, 0.9), rgba(0, 188, 212, 0.9));
-    color: #ffffff;
-    font-family: "Teko", sans-serif;
+    background: rgb(0, 81, 85); 
     transform: rotateY(180deg);
-}
-
-.riddle-card.flipped .riddle-front {
-    transform: rotateY(180deg);
-}
-
-.riddle-card.flipped .riddle-back {
-    transform: rotateY(0deg);
+    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.4);
 }
 
 footer {
-    background-color: rgb(0, 84, 57); 
-    color: #fff; 
+    background: rgba(0, 0, 0, 0.8); 
+    color: #ffffff;
     padding: 20px;
     text-align: center;
+    font-family: "Ubuntu", sans-serif;
     position: relative;
-    font-family: "New Amsterdam", sans-serif;
-    bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.footer-container {
-    max-width: 800px;
-    margin: 0 auto;
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.footer-content h2 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #b2ff59; 
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-.footer-content p {
-    margin: 5px 0;
+footer .social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease, opacity 0.3s;
 }
 
-.footer-content a {
-    color: #c5e1a5;
+footer .social-links a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+footer .social-links img {
+    width: 100%;
+    height: auto;
+}
+
+footer a {
     text-decoration: none;
-    transition: color 0.3s; 
+    color: rgba(118, 255, 3, 0.8);
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.footer-content a:hover {
-    text-decoration: underline;
-    color: #8bc34a; 
+footer a:hover {
+    color: rgba(168, 224, 99, 1);
 }
